@@ -1,0 +1,10 @@
+{% for tl, ds, img, lnk in myList %}
+    
+    <div>
+        <img src="{{ img }}" alt="image">
+        <h5>{{ tl }}{{ value|linebreaks }}</h5>
+        <p> {{ ds }}{{ value|linebreaks }} </p>
+        <a href="{{ lnk }}"> Read more </a>
+    </div>
+
+{% endfor %}    
