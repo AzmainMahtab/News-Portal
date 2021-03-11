@@ -1,0 +1,9 @@
+<h1> Youtube API JSON Dump</h1>
+{% for thumbnail, title, duration, url in videos %}
+    <div>
+        <img src="{{ thumbnail }}"
+        <h5> {{ title }}{{ value|linebreaks }} </h5>
+        <p> {{ duration }} </p>
+        <a href="{{ url }}"> Watch </a>
+    </div>
+{% endfor %}

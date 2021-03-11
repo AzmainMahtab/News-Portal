@@ -122,4 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
+YOUTUBE_DATA_API_KEY = 'AIzaSyAoSPw2OgpSeppGft_tIX8hVk8L1Weoiww'
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
