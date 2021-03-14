@@ -48,12 +48,12 @@
 
             <div class="nav-bar">
                     <ul>
-                        <li><a href="#"><i class="fas fa-home"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i>
+                        <li><a href="{% url 'home'%}"><i class="fas fa-home"></i></a></li>
+                        <li><a href="{% url 'youtube'%}"><i class="fa fa-youtube" aria-hidden="true"></i>
                         </a></li>
-                        <li><a href="#"><i class="fa fa-gamepad" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fas fa-poll"></i></a></li>
+                        <li><a href="{% url 'game' %}"><i class="fa fa-gamepad" aria-hidden="true"></i></a></li>
+                        <li><a href="{% url 'shop' %}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                        <li><a href="{% url 'trends' %}"><i class="fas fa-poll"></i></a></li>
                     </ul>
             </div>
         {% for tl, ds, img, lnk in myList %}

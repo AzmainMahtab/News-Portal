@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" href="{%static 'css/style.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
+{% extends 'portal_app/_base.html' %}
 
-        <div class="header">
-            <div class="search">
-                <form action="https://www.google.com/search" method="GET">
-                    <input type="text" name="q" placeholder="Google Search">
-                    <input type="submit" value="Search" class="search-btn">
-                </form>
-            </div>
-    
-              <!--Nav Bar-->
-    
-                <div class="nav-bar">
-                        <ul>
-                            <li><a href="#"><i class="fas fa-home"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i>
-                            </a></li>
-                            <li><a href="#"><i class="fa fa-gamepad" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fas fa-poll"></i></a></li>
-                        </ul>
-                </div>
-        </div>
+{% block content%}
 
         {% for thumbnail, title, duration, url in videos %}
             <div class="card">
@@ -44,10 +13,4 @@
             </div>
         {% endfor %}
 
-    </div> <!--Container Dive-->
-
-  <!--SCRIPTS-->
-  <script src="https://kit.fontawesome.com/63f171295e.js" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock %}

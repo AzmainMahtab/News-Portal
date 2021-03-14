@@ -1,0 +1,29 @@
+{% extends 'portal_app/_base.html' %}
+
+{% block content%}
+
+        <h2 align="center"> Top 5 on youtube </h2>
+
+        {% for thumbnail, title, duration, url in videos %}
+            <div class="card">
+                <div class="card-content">
+                    <img src="{{ thumbnail }}" alt="ImageNotFound">
+                    <h3>{{ title }}{{ value|linebreaks }} </h3>
+                    <p> {{ duration }} mins</p>
+                    <a href="{{ url }}" target="_blank" class="btn">Watch Now</a>
+                </div>
+            </div>
+        {% endfor %}
+
+        <h2 align="center"> Trending news </h2>
+                {% for tl, ds, img, lnk in myList %}
+            <div class="card">
+                <div class="card-content">
+                    <img src="{{ img }}" alt="ImageNotFound">
+                    <strong><h3>{{ tl }}{{ value|linebreaks }}</h3></strong>
+                    <p>{{ ds }}{{ value|linebreaks }}</p>
+                    <a href="{{ lnk }}" target="_blank" class="btn">Read more</a>
+                </div>
+            </div>
+        {% endfor %} 
+{% endblock %}
