@@ -1,9 +1,53 @@
-<h1> Youtube API JSON Dump</h1>
-{% for thumbnail, title, duration, url in videos %}
-    <div>
-        <img src="{{ thumbnail }}"
-        <h5> {{ title }}{{ value|linebreaks }} </h5>
-        <p> {{ duration }} </p>
-        <a href="{{ url }}"> Watch </a>
-    </div>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="search">
+                <form action="https://www.google.com/search" method="GET">
+                    <input type="text" name="q" placeholder="Google Search">
+                    <input type="submit" value="Search" class="search-btn">
+                </form>
+            </div>
+    
+              <!--Nav Bar-->
+    
+                <div class="nav-bar">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-gamepad" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fas fa-poll"></i></a></li>
+                        </ul>
+                </div>
+        </div>
+
+        {% for thumbnail, title, duration, url in videos %}
+            <div class="card">
+                <div class="card-content">
+                    <img src="{{ thumbnail }}" alt="ImageNotFound">
+                    <h3>{{ title }}{{ value|linebreaks }} </h3>
+                    <p> {{ duration }} mins</p>
+                    <a href="{{ url }}" target="_blank" class="btn">Watch Now</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div> <!--Container Dive-->
+
+  <!--SCRIPTS-->
+  <script src="https://kit.fontawesome.com/63f171295e.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
